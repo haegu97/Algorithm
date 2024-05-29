@@ -1,7 +1,12 @@
 function solution(nums) {
-    let myBag = [...new Set(nums)];
-    let limit = nums.length / 2;
-    console.log(myBag)
-    
-    return myBag.length > limit ? limit : myBag.length;
+  const arr = [];
+  const max = nums.length / 2;
+  for (let i = 0; i < nums.length; i++) {
+    if (arr.length < max) {
+      if (!arr.includes(nums[i])) {
+        arr.push(nums[i]);
+      }
+    }
+  }
+  return arr.length;
 }
