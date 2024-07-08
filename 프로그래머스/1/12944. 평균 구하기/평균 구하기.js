@@ -1,8 +1,9 @@
 function solution(arr) {
-    let num = 0
+    let sum = 0
+    
     for(let i = 0; i < arr.length; i++){
-        num += arr[i]
+        sum += arr[i]
     }
-    answer = num / arr.length
-    return answer;
+    
+    return sum / arr.length
 }
