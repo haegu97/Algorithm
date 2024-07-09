@@ -1,17 +1,20 @@
 function solution(a, b) {
-    let answer = 0;
-    if(a<b){
+    let sum = 0
+    if(a < b){
         for(let i = a; i <= b; i++){
-            answer += i
+            sum += i
         }
-        }
-    else if(a == b){
-            answer += a
-        }
-        else{
-            for(let i = b; i <= a; i++){
-                answer += i
-            }
+        return sum
     }
-    return answer;
+    else if(a == b){
+        return a
+    }
+    else{
+        let sum = 0
+        for(let i = b; i <= a; i++){
+            sum += i
+        }
+        return sum
+    }
+    
 }
