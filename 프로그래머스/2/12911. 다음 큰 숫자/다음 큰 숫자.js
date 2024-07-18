@@ -3,8 +3,7 @@ function solution(n) {
 
     let num = n + 1;
     while (true) {
-        const binaryString = num.toString(2);
-        const cnt2 = [...binaryString].filter(num => num === '1').length;
+        const cnt2 = num.toString(2).split('').filter(num => num === '1').length;
         if (cnt1 === cnt2) {
             return num;
         } else {
