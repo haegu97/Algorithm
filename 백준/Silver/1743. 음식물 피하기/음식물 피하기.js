@@ -23,7 +23,7 @@ newArr.forEach(([y, x]) => {
   graph[y - 1][x - 1] = 1;
 });
 
-const dfs = (y, x) => {
+function dfs(y, x) {
   visited[y][x] = true;
 
   for (let k = 0; k < 4; k++) {
@@ -42,7 +42,7 @@ const dfs = (y, x) => {
       dfs(ny, nx);
     }
   }
-};
+}
 
 for (let i = 0; i < N; i++) {
   for (let j = 0; j < M; j++) {
